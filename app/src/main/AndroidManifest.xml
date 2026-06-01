@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permission to make phone calls -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+
+    <!-- Permissions to read images from the phone's storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LuxeVistaResort"
+        tools:targetApi="31">
+
+        <!-- Splash Activity is the entry point of the app -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Public Screens -->
+        <activity android:name=".HomeActivity" android:exported="false" />
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".RoomsActivity" android:exported="false" />
+        <activity android:name=".ServicesActivity" android:exported="false" />
+
+        <!-- Logged-In User Screens -->
+        <activity android:name=".DashboardActivity" android:exported="false" />
+        <activity android:name=".LoggedInRoomsActivity" android:exported="false" />
+        <activity android:name=".LoggedInServicesActivity" android:exported="false" />
+        <activity android:name=".BookingConfirmationActivity" android:exported="false" />
+        <activity android:name=".ServiceReservationActivity" android:exported="false" />
+        <activity android:name=".BookingsActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
+
+        <!-- Admin Screens -->
+        <activity android:name=".AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".AddEditRoomActivity" android:exported="false" />
+        <activity android:name=".AddEditServiceActivity" android:exported="false" />
+
+    </application>
+
+</manifest>

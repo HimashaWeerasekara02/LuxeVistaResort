@@ -1,0 +1,10 @@
+<!-- A simple gradient to represent the 'Our Rooms' card image -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="12dp" />
+    <gradient
+        android:angle="45"
+        android:endColor="#4A90E2"
+        android:startColor="#50E3C2"
+        android:type="linear" />
+</shape>

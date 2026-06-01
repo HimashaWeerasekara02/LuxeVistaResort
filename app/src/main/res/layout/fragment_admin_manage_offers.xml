@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/dark_bg"
+    android:paddingTop="40dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send a Special Offer"
+        android:textColor="@color/text_light"
+        android:textSize="22sp"
+        android:fontFamily="@font/playfair_display_bold"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/offerMessageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/edit_text_background"
+        android:gravity="top"
+        android:hint="Enter your offer message here..."
+        android:inputType="textMultiLine"
+        android:padding="16dp"
+        android:textColor="@color/text_light"
+        android:textColorHint="@color/text_muted" />
+
+    <Button
+        android:id="@+id/sendOfferButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_background"
+        android:padding="12dp"
+        android:text="Send Notification to All Users"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

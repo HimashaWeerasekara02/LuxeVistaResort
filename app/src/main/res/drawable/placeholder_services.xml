@@ -1,0 +1,10 @@
+<!-- A simple gradient to represent the 'Our Services' card image -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="12dp" />
+    <gradient
+        android:angle="45"
+        android:endColor="#E8A87C"
+        android:startColor="#F6EFA7"
+        android:type="linear" />
+</shape>

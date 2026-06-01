@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Theme Design -->
+    <color name="primary_color">#00A99D</color>
+    <color name="accent_color">#E8A87C</color>
+    <color name="accent_color_variant">#03DAC5</color>
+    <color name="dark_bg">#0A2240</color>
+    <color name="dark_card_bg">#1D3557</color>
+    <color name="text_light">#F0F2F5</color>
+    <color name="text_muted">#8D99AE</color>
+
+    <!--Colors for Notifications -->
+    <color name="notification_yellow">#FFC107</color>
+    <color name="notification_badge_red">#EF476F</color>
+
+    <!-- Standard Android Colors (keep these) -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

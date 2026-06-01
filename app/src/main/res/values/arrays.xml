@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="initial_slider_values">
+        <item>100.0</item>
+        <item>500.0</item>
+    </array>
+
+    <string-array name="room_types_filter">
+        <item>Any</item>
+        <item>Ocean View</item>
+        <item>Garden View</item>
+    </string-array>
+
+    <string-array name="sort_price_options">
+        <item>Default</item>
+        <item>Low to High</item>
+        <item>High to Low</item>
+    </string-array>
+
+    <string-array name="adult_options">
+        <item>1 Adult</item>
+        <item>2 Adults</item>
+    </string-array>
+
+    <string-array name="children_options">
+        <item>0 Children</item>
+        <item>1 Child</item>
+        <item>2 Children</item>
+    </string-array>
+
+    <string-array name="room_type_preferences">
+        <item>Any</item>
+        <item>Ocean View</item>
+        <item>Garden View</item>
+    </string-array>
+
+    <string-array name="service_preferences">
+        <item>Any</item>
+        <item>Spa Treatments</item>
+        <item>Fine Dining</item>
+        <item>Poolside Cabanas</item>
+    </string-array>
+
+</resources>

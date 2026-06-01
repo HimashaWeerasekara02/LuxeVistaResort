@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LuxeVista Resort</string>
+
+    <!-- String resources for RoomsActivity -->
+    <string name="no_rooms_available">No rooms are available at the moment.</string>
+    <string name="room_image_description">Image of</string>
+    <string name="service_image_description">Image of the hotel service</string>
+    <string name="list_of_available_services">List of available services</string>
+</resources>
+

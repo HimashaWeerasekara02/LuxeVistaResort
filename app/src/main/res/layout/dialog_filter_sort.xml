@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter by Price"
+        android:textSize="18sp"
+        android:fontFamily="@font/playfair_display_bold" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/priceRangeSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="100"
+        android:valueTo="500"
+        app:values="@array/initial_slider_values" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter by Amenities"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/playfair_display_bold"/>
+
+    <CheckBox
+        android:id="@+id/cbOceanView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ocean View" />
+
+    <CheckBox
+        android:id="@+id/cbBalcony"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balcony" />
+
+</LinearLayout>

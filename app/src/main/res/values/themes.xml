@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.LuxeVistaResort" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/dark_card_bg</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent_color</item>
+        <item name="colorSecondaryVariant">@color/accent_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/dark_bg</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Custom Style for Spinners to fix text visibility -->
+    <style name="AppSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/date_input_background</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:popupBackground">@color/dark_card_bg</item>
+    </style>
+
+</resources>
+

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    tools:context=".DashboardActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <!-- Welcome Header (Padding is handled in Java) -->
+            <TextView
+                android:id="@+id/welcomeMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/playfair_display_bold"
+                android:textColor="@color/text_light"
+                android:textSize="24sp"
+                tools:text="Welcome Back, John!" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Ready for your next luxury experience?"
+                android:textColor="@color/text_muted"
+                android:textSize="16sp" />
+
+            <!-- Personalized Recommendations Card -->
+            <LinearLayout
+                android:id="@+id/recommendationContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/playfair_display_bold"
+                    android:text="Recommended For You"
+                    android:textColor="@color/text_light"
+                    android:textSize="20sp" />
+
+                <!-- Spa Recommendation -->
+                <LinearLayout
+                    android:id="@+id/spaRecommendationCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:scaleType="centerCrop" android:src="@drawable/recommendation_spa" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_regular" android:text="Relax at the Serenity Spa" android:textColor="@color/text_light" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:fontFamily="@font/poppins_regular" android:text="A perfect way to unwind." android:textColor="@color/text_muted" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View android:id="@+id/recommendationDivider1" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:background="@color/dark_bg" />
+
+                <!-- Ocean View Offer -->
+                <LinearLayout
+                    android:id="@+id/offerRecommendationCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:scaleType="centerCrop" android:src="@drawable/recommendation_offer" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_regular" android:text="An Offer on Ocean View Suites!" android:textColor="@color/text_light" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:fontFamily="@font/poppins_regular" android:text="Enjoy 15% off your stay." android:textColor="@color/text_muted" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View android:id="@+id/recommendationDivider2" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:background="@color/dark_bg" />
+
+                <!-- Garden View Offer -->
+                <LinearLayout
+                    android:id="@+id/gardenRecommendationCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:scaleType="centerCrop" android:src="@drawable/recommendation_garden" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_regular" android:text="Special Rate for Garden Rooms" android:textColor="@color/text_light" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:fontFamily="@font/poppins_regular" android:text="Book now and get a complimentary breakfast." android:textColor="@color/text_muted" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View android:id="@+id/recommendationDivider3" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:background="@color/dark_bg" />
+
+                <!-- Dining Offer -->
+                <LinearLayout
+                    android:id="@+id/diningRecommendationCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:scaleType="centerCrop" android:src="@drawable/recommendation_dining" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_regular" android:text="20% Off Fine Dining" android:textColor="@color/text_light" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:fontFamily="@font/poppins_regular" android:text="A special discount for your next meal." android:textColor="@color/text_muted" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View android:id="@+id/recommendationDivider4" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:background="@color/dark_bg" />
+
+                <!-- Cabana Offer -->
+                <LinearLayout
+                    android:id="@+id/cabanaRecommendationCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:scaleType="centerCrop" android:src="@drawable/recommendation_cabana" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_regular" android:text="Reserve a Poolside Cabana" android:textColor="@color/text_light" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:fontFamily="@font/poppins_regular" android:text="Enjoy a full day of relaxation." android:textColor="@color/text_muted" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Discovery Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/playfair_display_bold"
+                android:text="Discover LuxeVista"
+                android:textColor="@color/text_light"
+                android:textSize="20sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/discovery_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="5dp">
+                    <include layout="@layout/discovery_card" android:id="@+id/cardOurRooms" />
+                    <include layout="@layout/discovery_card" android:id="@+id/cardOurServices" />
+                    <include layout="@layout/discovery_card" android:id="@+id/cardFineDining" />
+                    <include layout="@layout/discovery_card" android:id="@+id/cardSpa" />
+                    <include layout="@layout/discovery_card" android:id="@+id/cardCabanas" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- All other informational cards -->
+            <!-- About Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/playfair_display_bold" android:text="About LuxeVista" android:textColor="@color/text_light" android:textSize="20sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:fontFamily="@font/poppins_regular" android:lineSpacingExtra="4dp" android:text="Nestled on the pristine shores of a sun-kissed beach in Wattala, LuxeVista Resort offers an unparalleled luxury experience." android:textColor="@color/text_muted" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:fontFamily="@font/playfair_display_bold" android:text="Facilities &amp; Gallery" android:textColor="@color/text_light" android:textSize="18sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:fontFamily="@font/poppins_regular" android:text="• Infinity Pool with Ocean View" android:textColor="@color/text_muted" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:fontFamily="@font/poppins_regular" android:text="• Private Beach Access" android:textColor="@color/text_muted" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:fontFamily="@font/poppins_regular" android:text="• State-of-the-art Fitness Center" android:textColor="@color/text_muted" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="110dp" android:layout_marginTop="16dp" android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="5dp" app:cardCornerRadius="8dp">
+                        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/home_gallery_pool" android:scaleType="centerCrop"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="5dp" app:cardCornerRadius="8dp">
+                        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/home_gallery_interior" android:scaleType="centerCrop"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Offers Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/playfair_display_bold" android:text="Resort Activities" android:textColor="@color/text_light" android:textSize="20sp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="16dp" android:gravity="center_vertical">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_tour" app:tint="@color/text_muted"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:fontFamily="@font/poppins_regular" android:text="Guided Beach Tours" android:textColor="@color/text_light" android:textStyle="bold" android:textSize="16sp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginStart="36dp" android:fontFamily="@font/poppins_regular" android:text="Discover the hidden gems of the coastline." android:textColor="@color/text_muted"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dark_bg" android:layout_marginTop="12dp" android:layout_marginBottom="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_water_sports" app:tint="@color/text_muted"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:fontFamily="@font/poppins_regular" android:text="Water Sports Package" android:textColor="@color/text_light" android:textStyle="bold" android:textSize="16sp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginStart="36dp" android:fontFamily="@font/poppins_regular" android:text="Get adventurous with our exciting water sports." android:textColor="@color/text_muted"/>
+            </LinearLayout>
+
+            <!-- Nearby Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/playfair_display_bold" android:text="Explore Nearby" android:textColor="@color/text_light" android:textSize="20sp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="16dp" android:gravity="center_vertical">
+                    <androidx.cardview.widget.CardView android:layout_width="40dp" android:layout_height="40dp" app:cardCornerRadius="8dp">
+                        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/attraction_beach"/>
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_regular" android:text="Mount Lavinia Beach" android:textColor="@color/text_light" android:textSize="16sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:fontFamily="@font/poppins_regular" android:text="Golden sands and calm waters." android:textColor="@color/text_muted"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dark_bg" android:layout_marginTop="12dp" android:layout_marginBottom="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <androidx.cardview.widget.CardView android:layout_width="40dp" android:layout_height="40dp" app:cardCornerRadius="8dp">
+                        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/attraction_temple"/>
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_regular" android:text="Gangaramaya Temple" android:textColor="@color/text_light" android:textSize="16sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:fontFamily="@font/poppins_regular" android:text="A stunning mix of architecture." android:textColor="@color/text_muted"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Contact Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/playfair_display_bold" android:text="Contact &amp; Location" android:textColor="@color/text_light" android:textSize="20sp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:gravity="center_vertical" android:orientation="horizontal">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_location" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:fontFamily="@font/poppins_regular" android:text="Beach Rd, Wattala, Sri Lanka" android:textColor="@color/text_light" android:textSize="16sp"/>
+                </LinearLayout>
+                <Button android:id="@+id/callNowButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:backgroundTint="@color/dark_bg" android:drawableLeft="@drawable/ic_phone" android:drawableTint="@color/primary_color" android:fontFamily="@font/poppins_regular" android:text="Call Now" android:textAlignment="textStart" android:textColor="@color/primary_color" android:textStyle="bold" app:strokeColor="@color/primary_color" app:strokeWidth="1dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Logged-in Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_card_bg"
+        app:itemIconTint="@color/bottom_nav_item_color"
+        app:itemTextColor="@color/bottom_nav_item_color"
+        app:menu="@menu/bottom_nav_menu_logged_in" />
+
+</RelativeLayout>
+

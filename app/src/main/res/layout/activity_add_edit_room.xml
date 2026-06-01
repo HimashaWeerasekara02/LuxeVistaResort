@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    tools:context=".AddEditRoomActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_card_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_light"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/playfair_display_bold"
+            android:gravity="center"
+            android:text="Add Room"
+            android:textColor="@color/text_light"
+            android:textSize="22sp" />
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Image Preview and Selection Section -->
+            <TextView
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Image"
+                android:textColor="@color/text_muted" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="12dp"
+                android:layout_marginTop="4dp">
+                <ImageView
+                    android:id="@+id/imageViewRoomPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@color/dark_card_bg" />
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/buttonSelectImage"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select Image"
+                android:textColor="@color/accent_color"/>
+
+            <!-- Existing Fields -->
+            <TextView
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Room Name"
+                android:textColor="@color/text_muted" />
+
+            <EditText
+                android:id="@+id/editTextRoomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/date_input_background"
+                android:hint="e.g., Ocean View Suite"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/text_light"
+                android:textColorHint="@color/text_muted" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Description"
+                android:textColor="@color/text_muted" />
+
+            <EditText
+                android:id="@+id/editTextRoomDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/date_input_background"
+                android:gravity="top"
+                android:hint="Enter a short description..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="3"
+                android:padding="12dp"
+                android:textColor="@color/text_light"
+                android:textColorHint="@color/text_muted" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Price per Night ($)"
+                android:textColor="@color/text_muted" />
+
+            <EditText
+                android:id="@+id/editTextRoomPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/date_input_background"
+                android:hint="e.g., 350"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="@color/text_light"
+                android:textColorHint="@color/text_muted" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Amenities (use • to separate)"
+                android:textColor="@color/text_muted" />
+
+            <EditText
+                android:id="@+id/editTextRoomAmenities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/date_input_background"
+                android:hint="e.g., King Bed • Ocean View • Balcony"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/text_light"
+                android:textColorHint="@color/text_muted" />
+
+            <!-- ADDED THIS SECTION -->
+            <TextView
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Room Capacity"
+                android:textColor="@color/text_muted" />
+
+            <EditText
+                android:id="@+id/editTextRoomCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/date_input_background"
+                android:hint="e.g., 2"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="@color/text_light"
+                android:textColorHint="@color/text_muted" />
+            <!-- END OF ADDED SECTION -->
+
+
+            <Button
+                android:id="@+id/buttonSaveRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/primary_color"
+                android:padding="15dp"
+                android:text="Save Room"
+                android:textColor="@color/text_light"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
