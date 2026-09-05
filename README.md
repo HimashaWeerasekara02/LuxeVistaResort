@@ -2,6 +2,9 @@
 
 An Android mobile application designed to provide users with a convenient and user-friendly experience for exploring and booking resort accommodations and services. This app features interactive interfaces, local database management using SQLite, and distinct portals for Guests and Administrators.
 
+## 🎥 Video Demonstration
+**[Watch the App Demo on YouTube](https://youtu.be/9yPTSlVx5r0?si=-JH2cBUTpHBL4Xgd)**
+
 ## 📱 Key Features
 * **User Authentication:** Secure login and registration for guests.
 * **Role-Based Access:** Dedicated `ADMIN` and `GUEST` roles.
