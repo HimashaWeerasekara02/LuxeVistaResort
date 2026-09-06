@@ -1,5 +1,8 @@
 # Luxe Vista Resort - Mobile Application
 
+### 📌 Project Scope & Scenario
+*This project was developed to fulfill a specific academic coursework scenario. The implementation focuses strictly on core system architecture and local data persistence as required by the assignment guidelines.*
+
 An Android mobile application designed to provide users with a convenient and user-friendly experience for exploring and booking resort accommodations and services. This app features interactive interfaces, local database management using SQLite, and distinct portals for Guests and Administrators.
 
 ## 🎥 Video Demonstration
